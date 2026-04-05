@@ -1,0 +1,109 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+#vanta-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+header{
+    padding-bottom: 20px;
+    padding-top: 20px
+
+}
+header .logo{
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 90px
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-bottom: 10px;
+}
+header ul a{
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+header ul a:hover{
+    background-color: rgba(31, 31, 31, 0.112);
+    
+    border-radius: 10px;
+}
+
+.introduction{
+    height: 400px;
+    padding-left: 200px;
+    padding-right: 200px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.texto-introducao{
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    position: absolute;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+    /* Posicao do texto */
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    padding-top: 500px;
+    text-align: center;
+    /* FAZENDO O EFETO DE TYPEWRITER*/
+    overflow: hidden; /* Esconde o texto que ultrapassa o container */
+    white-space: nowrap; /* Impede a quebra de linha */
+    animation: typing 3.5s steps(30, end) forwards; /* Animação de digitação */
+
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.texto-introducao::after{ /* Adiciona o cursor piscante após o texto */
+    content: '_';
+    font-weight: bold;
+    margin-left: 5px;
+    color: white;
+    animation: piscar-cursor 1s step-end infinite;
+}
+
+@keyframes piscar-cursor{ /* Animação de piscar para o cursor */
+    from, to{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+.introduction img{
+    width: 1600px;
+    height: 1080px;
+    object-fit: cover;
+}
