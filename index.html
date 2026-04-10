@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Thales Karam</title>
-        <link rel="stylesheet" href="/style/estilo.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-frag32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-frag16x16.png">
-        <link rel="manifest" href="img/site.webmanifest">
-    </head>
-    <body>
-        <div id="vanta-bg"></div>
-        <header>
-            <img class="logo" src="img/icone-header.png" alt="Ícone do cabeçalho">
-            <nav>
-                <ul>
-                    <li><a href="#sobre-mim">SOBRE MIM</a></li>
-                    <li><a href="#projetos">PROJETOS</a></li>
-                    <li><a href="#contato">CONTATOS</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="about-me">
-                <div class="introduction">
-                    <h1 class="texto-introducao">Olá! Me chamo Thales Karam</h1>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thales Karam</title>
+    <link rel="stylesheet" href="style/estilo.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-frag32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-frag16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+</head>
+
+<body>
+    <div id="vanta-bg"></div>
+    <!--<header>
+        <img class="logo" src="img/logo-gif.gif" alt="Ícone do cabeçalho">
+        <nav>
+            <ul>
+                <li><a href="#sobre-mim">SOBRE MIM</a></li>
+                <li><a href="#projetos">PROJETOS</a></li>
+                <li><a href="#contato">CONTATOS</a></li>
+            </ul>
+        </nav>
+    </header>-->
+    <main>
+        <section class="about-me" id="sobre-mim">
+            <div class="introduction" aria-label="Terminal interativo com informações sobre Thales Karam">
+                <div class="terminal-header">
+                    <div class="terminal-buttons" aria-hidden="true">
+                        <span class="terminal-button close"></span>
+                        <span class="terminal-button minimize"></span>
+                        <span class="terminal-button expand"></span>
+                    </div>
+                    <p class="terminal-title">thales@portfolio:~</p>
                 </div>
-            </section>
-        </main>
-        <!-- THREE.js obrigatório -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-        <!-- VANTA -->
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
-        <script src="/script/script.js"></script>
-        <script>
-        VANTA.HALO({
-            el: "#vanta-bg",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00
-        });
-</script>
-    </body>
+                <div class="terminal-body">
+                    <div class="terminal-output" id="terminal-output" aria-live="polite"></div>
+                    <form class="terminal-form" id="terminal-form" autocomplete="off">
+                        <label class="terminal-prompt" for="terminal-input">thales@portfolio:~$</label>
+                        <input class="terminal-input" id="terminal-input" name="command" type="text" spellcheck="false"
+                            placeholder="digite --help" aria-label="Digite um comando no terminal">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- THREE.js obrigatório -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <!-- VANTA -->
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+
 </html>
