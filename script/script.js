@@ -204,9 +204,9 @@ function initializeTerminal() {
   }
 
   appendEntry('', [
-    line(`Ola, eu sou ${profile.name}.`),
+    line(`Olá, eu sou ${profile.name}.`),
     line(profile.intro),
-    line('Digite --help para listar os comandos disponiveis.')
+    line('Digite --help para listar os comandos disponíveis.')
   ]);
 
   form.addEventListener('submit', (event) => {
