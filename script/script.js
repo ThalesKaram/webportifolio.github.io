@@ -8,12 +8,9 @@ const profile = {
     'Experiencia atual: Participando do projeto de extensão universitário InovaFriLab, onde contribuo para o desenvolvimento de soluções inovadoras.'
   ],
   skills: [
-    'Spring Boot com Hibernate para desenvolvimento backend em Java',
     'Java para desenvolvimento backend e logica de negocio',
     'Git para controle de versao e colaboracao',
     'Node.js para desenvolvimento backend e APIs',
-    'Nest.js para estruturação de aplicações backend escaláveis',
-    'TypeScript para tipagem e qualidade de codigo',
     'SQL para gerenciamento de bancos de dados relacionais',
     'HTML semantico',
     'CSS para layout, responsividade e interface visual',
@@ -22,7 +19,6 @@ const profile = {
   projects: [
     'InovaFriHub: Plataforma de mapeamento e conexao entre empreendedores, investidores e mentores, facilitando o ecossistema de inovacao.',
     'Sistema de Pedidos de Software: Aplicacao web para gerenciamento de pedidos de software, desde a solicitacao ate a entrega, com acompanhamento em tempo real. https://aplica-ocorporativanative-production.up.railway.app/login',
-    'WebPortifolio Interativo: Portifolio online com terminal interativo, permitindo aos visitantes explorar informacoes e projetos de forma dinamica.',
   ],
   links: {
     github: 'https://github.com/ThalesKaram',
@@ -33,7 +29,7 @@ const profile = {
 
 function buildHelpLines() {
   return [
-    'Comandos disponiveis:',
+    'Comandos disponíveis:',
     '--help   : mostra esta ajuda',
     'sobre    : resumo profissional',
     'skills   : tecnologias e pontos fortes',
@@ -54,7 +50,7 @@ function line(text, options = {}) {
 
 function getUnavailableMessage(label, fileHint) {
   return [
-    line(`${label} ainda nao configurado.`),
+    line(`${label} ainda não configurado.`),
     line(`Atualize o valor em ${fileHint}.`, { className: 'terminal-muted' })
   ];
 }
@@ -190,8 +186,8 @@ function initializeTerminal() {
 
     if (!handler) {
       appendEntry(command, [
-        line(`Comando nao reconhecido: ${command}`),
-        line('Digite --help para ver os comandos disponiveis.')
+        line(`Comando não reconhecido: ${command}`),
+        line('Digite --help para ver os comandos disponíveis.')
       ]);
       return;
     }
