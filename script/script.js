@@ -10,7 +10,7 @@ const profile = {
   skills: [
     'Java para desenvolvimento backend e logica de negocio',
     'Git para controle de versao e colaboracao',
-    'Node.js para desenvolvimento backend e APIs',
+    'Nest.js para desenvolvimento backend e APIs',
     'SQL para gerenciamento de bancos de dados relacionais',
     'HTML semantico',
     'CSS para layout, responsividade e interface visual',
